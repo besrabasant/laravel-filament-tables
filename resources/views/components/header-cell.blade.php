@@ -6,14 +6,14 @@
     'sortDirection',
 ])
 
-<th {{ $attributes->merge($extraAttributes)->class(['px-4 py-2', 'filament-tables-header-cell']) }}>
+<th {{ $attributes->merge($extraAttributes)->class(['px-4 py-3', 'filament-tables-header-cell']) }}>
     <button
         @if ($sortable)
             wire:click="sortTable('{{ $name }}')"
         @endif
         type="button"
         @class([
-            'flex items-center whitespace-nowrap space-x-1 rtl:space-x-reverse font-medium text-sm text-gray-600',
+            'flex items-center whitespace-nowrap space-x-1 rtl:space-x-reverse font-medium text-xs text-gray-600',
             'cursor-default' => ! $sortable,
         ])
     >
