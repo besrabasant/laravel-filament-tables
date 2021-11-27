@@ -15,7 +15,7 @@ return [
 
         'label' => 'Seitennavigation',
 
-        'overview' => ':first bis :last von :total Ergebnissen',
+        'overview' => '<strong class="text-gray-800">:first</strong>&nbsp;bis&nbsp;<strong class="text-gray-800">:last</strong>&nbsp;von&nbsp;<strong class="text-gray-800">:total</strong>&nbsp;Ergebnissen',
 
         'fields' => [
 

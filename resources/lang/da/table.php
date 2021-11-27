@@ -15,7 +15,7 @@ return [
 
         'label' => 'Paginering Navigation',
 
-        'overview' => 'Viser :first til :last af :total resultater',
+        'overview' => 'Viser&nbsp;<strong class="text-gray-800">:first</strong>&nbsp;til&nbsp;<strong class="text-gray-800">:last</strong>&nbsp;af&nbsp;<strong class="text-gray-800">:total</strong>&nbsp;resultater',
 
         'fields' => [
 

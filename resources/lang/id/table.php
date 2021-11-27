@@ -15,7 +15,7 @@ return [
 
         'label' => 'Navigasi halaman',
 
-        'overview' => 'Menampilkan :first sampai :last dari :total hasil',
+        'overview' => 'Menampilkan&nbsp;<strong class="text-gray-800">:first</strong>&nbsp;sampai&nbsp;<strong class="text-gray-800">:last</strong>&nbsp;dari&nbsp;<strong class="text-gray-800">:total</strong>&nbsp;hasil',
 
         'fields' => [
 

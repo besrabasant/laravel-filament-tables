@@ -1,6 +1,6 @@
 @props([
-    'paginator',
-    'recordsPerPageSelectOptions',
+'paginator',
+'recordsPerPageSelectOptions',
 ])
 
 @php
@@ -24,7 +24,7 @@
             @endif
         </div>
 
-        <x-tables::pagination.records-per-page-selector :options="$recordsPerPageSelectOptions" />
+        <x-tables::pagination.records-per-page-selector :options="$recordsPerPageSelectOptions"/>
 
         <div class="w-10">
             @if ($paginator->hasPages() && $paginator->hasMorePages())
@@ -55,18 +55,18 @@
             @else
                 <div class="pl-2 text-sm font-medium">
                     @if ($paginator->total() > 1)
-                        {{ __('tables::table.pagination.overview', [
+                        {!! __('tables::table.pagination.overview', [
                             'first' => $paginator->firstItem(),
                             'last' => $paginator->lastItem(),
                             'total' => $paginator->total(),
-                        ]) }}
+                        ]) !!}
                     @endif
                 </div>
             @endif
         </div>
 
         <div class="flex items-center justify-center">
-            <x-tables::pagination.records-per-page-selector :options="$recordsPerPageSelectOptions" />
+            <x-tables::pagination.records-per-page-selector :options="$recordsPerPageSelectOptions"/>
         </div>
 
         <div class="flex items-center justify-end">
@@ -98,7 +98,7 @@
 
                             @foreach ($paginator->render()->offsetGet('elements') as $element)
                                 @if (is_string($element))
-                                    <x-tables::pagination.item :label="$element" disabled />
+                                    <x-tables::pagination.item :label="$element" disabled/>
                                 @endif
 
                                 @if (is_array($element))

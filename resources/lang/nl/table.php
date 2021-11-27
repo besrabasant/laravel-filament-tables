@@ -15,7 +15,7 @@ return [
 
         'label' => 'Paginatie navigatie',
 
-        'overview' => 'Toont :first tot :last van :total resultaten',
+        'overview' => 'Toont&nbsp;<strong class="text-gray-800">:first</strong>&nbsp;tot&nbsp;<strong class="text-gray-800">:last</strong>&nbsp;van&nbsp;<strong class="text-gray-800">:total</strong>&nbsp;resultaten',
 
         'fields' => [
 

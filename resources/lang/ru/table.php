@@ -15,7 +15,7 @@ return [
 
         'label' => 'навигация разбивки на страницы',
 
-        'overview' => 'показ :first до :last из :total результаты',
+        'overview' => 'показ&nbsp;<strong class="text-gray-800">:first</strong>&nbsp;до&nbsp;<strong class="text-gray-800">:last</strong>&nbsp;из&nbsp;<strong class="text-gray-800">:total</strong>&nbsp;результаты',
 
         'fields' => [
 

@@ -15,7 +15,7 @@ return [
 
         'label' => 'ڕێنوێیی پەڕەکردن',
 
-        'overview' => 'پیشاندان :first بۆ :last لە :total ئەنجام',
+        'overview' => 'پیشاندان&nbsp;<strong class="text-gray-800">:first</strong>&nbsp;بۆ&nbsp;<strong class="text-gray-800">:last</strong>&nbsp;لە&nbsp;<strong class="text-gray-800">:total</strong>&nbsp;ئەنجام',
 
         'fields' => [
 

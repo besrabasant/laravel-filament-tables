@@ -15,7 +15,7 @@ return [
 
         'label' => '分页',
 
-        'overview' => '显示 :first 到 :last 的 :total 结果',
+        'overview' => '显示&nbsp;<strong class="text-gray-800">:first</strong>&nbsp;到&nbsp;<strong class="text-gray-800">:last</strong>&nbsp;的&nbsp;<strong class="text-gray-800">:total</strong>&nbsp;结果',
 
         'fields' => [
 

@@ -15,7 +15,7 @@ return [
 
         'label' => 'გვერდების ნავიგაცია',
 
-        'overview' => 'Showing :first to :last of :total results',
+        'overview' => 'Showing&nbsp;<strong class="text-gray-800">:first</strong>&nbsp;to&nbsp;<strong class="text-gray-800">:last</strong>&nbsp;of&nbsp;<strong class="text-gray-800">:total</strong>&nbsp;results',
 
         'fields' => [
 

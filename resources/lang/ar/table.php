@@ -15,7 +15,7 @@ return [
 
         'label' => 'التنقل بين الصفحات',
 
-        'overview' => 'عرض :first إلى :last من :total النتائج',
+        'overview' => 'عرض&nbsp;<strong class="text-gray-800">:first</strong>&nbsp;إلي&nbsp;<strong class="text-gray-800">:last</strong>&nbsp;من&nbsp;<strong class="text-gray-800">:total</strong>&nbsp;النتائج',
 
         'fields' => [
 

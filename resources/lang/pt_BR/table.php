@@ -15,7 +15,7 @@ return [
 
         'label' => 'Paginação',
 
-        'overview' => 'Exibindo :first a :last de :total resultados',
+        'overview' => 'Exibindo&nbsp;<strong class="text-gray-800">:first</strong>&nbsp;a&nbsp;<strong class="text-gray-800">:last</strong>&nbsp;de&nbsp;<strong class="text-gray-800">:total</strong>&nbsp;resultados',
 
         'fields' => [
 

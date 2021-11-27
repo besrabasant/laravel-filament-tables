@@ -15,7 +15,7 @@ return [
 
         'label' => 'جهت یابی صفحه بندی',
 
-        'overview' => 'در حال نمایش :first به :last از :total نتایج',
+        'overview' => 'در حال نمایش&nbsp;<strong class="text-gray-800">:first</strong>&nbsp;به&nbsp;<strong class="text-gray-800">:last</strong>&nbsp;از&nbsp;<strong class="text-gray-800">:total</strong>&nbsp;نتایج',
 
         'fields' => [
 

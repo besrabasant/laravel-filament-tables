@@ -15,7 +15,7 @@ return [
 
         'label' => 'Pagineringsmeny',
 
-        'overview' => 'Visar från :first till :last av :total totalt',
+        'overview' => 'Visar från&nbsp;<strong class="text-gray-800">:first</strong>&nbsp;till&nbsp;<strong class="text-gray-800">:last</strong>&nbsp;av&nbsp;<strong class="text-gray-800">:total</strong>&nbsp;totalt',
 
         'fields' => [
 
