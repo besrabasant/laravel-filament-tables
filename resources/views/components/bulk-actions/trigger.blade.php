@@ -1,7 +1,7 @@
 <x-tables::button
-    {{--    icon="heroicon-o-dots-vertical"--}}
+    icon="heroicon-s-chevron-down"
+    icon-position="after"
     x-on:click="isOpen = ! isOpen"
-    :label="__('tables::table.buttons.open_actions.label')"
     {{ $attributes->class(['filament-tables-bulk-actions-trigger']) }}
 >
     {{ __('tables::table.buttons.bulk_actions.label') }}
