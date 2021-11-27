@@ -53,6 +53,10 @@ return [
             'label' => 'Open actions',
         ],
 
+        'bulk_actions' => [
+            'label' => 'Bulk actions',
+        ]
+
     ],
 
     'actions' => [
