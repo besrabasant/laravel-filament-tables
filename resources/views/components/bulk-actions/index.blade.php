@@ -1,5 +1,7 @@
 @props([
-    'actions',
+'actions',
+'allRecordsCount',
+'allRecordsSelected' => false,
 ])
 
 <div
@@ -9,7 +11,7 @@
     x-cloak
     {{ $attributes->class(['relative', 'filament-tables-bulk-actions']) }}
 >
-    <x-tables::bulk-actions.trigger />
+    <x-tables::bulk-actions.trigger/>
 
     <div
         x-show="isOpen"
@@ -22,15 +24,15 @@
         x-transition:leave-end="-translate-y-1 opacity-0"
         class="absolute right-0 z-10 mt-2 shadow-xl rounded-md w-52 top-full"
     >
-        <ul class="py-1 space-y-1 overflow-hidden bg-white shadow-lg rounded-md border border-gray-100">
-{{-- FIXME: Fix select all records for current page only. Allow deselection of selected records             --}}
-{{--            @if (! $allRecordsSelected)--}}
-{{--                <x-tables::dropdown.item wire:click="toggleSelectAllTableRecords" icon="heroicon-o-duplicate">--}}
-{{--                    {{ __('tables::table.actions.buttons.select_all.label', ['count' => $allRecordsCount]) }}--}}
-{{--                </x-tables::dropdown.item>--}}
+        <ul class="py-1 space-y-1 overflow-hidden bg-white shadow-lg rounded-md border border-gray-300">
+            {{-- FIXME: Fix select all records for current page only. Allow deselection of selected records             --}}
+            {{--            @if (! $allRecordsSelected)--}}
+            {{--                <x-tables::dropdown.item wire:click="toggleSelectAllTableRecords" icon="heroicon-o-duplicate">--}}
+            {{--                    {{ __('tables::table.actions.buttons.select_all.label', ['count' => $allRecordsCount]) }}--}}
+            {{--                </x-tables::dropdown.item>--}}
 
-{{--                <div aria-hidden="true" class="border-t border-gray-200 ml-11"></div>--}}
-{{--            @endif--}}
+            {{--                <div aria-hidden="true" class="border-t border-gray-200 ml-11"></div>--}}
+            {{--            @endif--}}
 
             @foreach($actions as $action)
                 <x-tables::dropdown.item

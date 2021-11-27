@@ -69,7 +69,7 @@
         <span>{{ $slot }}</span>
 
         @if ($icon && $iconPosition === 'after')
-            <x-dynamic-component :component="$icon" :class="$iconClasses" />
+            <x-dynamic-component :component="$icon" :class="$iconClasses"/>
         @endif
     </button>
 @elseif ($tag === 'a')
@@ -95,7 +95,7 @@
         <span>{{ $slot }}</span>
 
         @if ($icon && $iconPosition === 'after')
-            <x-dynamic-component :component="$icon" :class="$iconClasses" />
+            <x-dynamic-component :component="$icon" :class="$iconClasses"/>
         @endif
     </a>
 @endif

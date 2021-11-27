@@ -6,6 +6,15 @@
     'sortDirection',
 ])
 
+@php
+    /**
+     * @var string $sortDirection
+     */
+    $sortIconClasses = \Illuminate\Support\Arr::toCssClasses([
+        'opacity-0 group-hover:opacity-100' => empty($sortDirection),
+    ]);
+@endphp
+
 <th {{ $attributes->merge($extraAttributes)->class(['px-4 py-3', 'filament-tables-header-cell']) }}>
     <button
         @if ($sortable)
@@ -22,14 +31,14 @@
         </span>
 
         @if($sortable)
-            <span class="relative flex items-center @unless($sortDirection) opacity-0 group-hover:opacity-100 @endif">
+            <span class="relative flex items-center {{$sortIconClasses}}">
                 @unless($sortDirection)
-                    <x-heroicon-s-selector class="w-3 h-3"/>
+                    <x-heroicon-s-selector class="w-4 h-4"/>
                 @endunless
                 @if ($sortDirection === 'asc')
-                    <x-heroicon-s-chevron-down class="w-3 h-3" />
+                    <x-heroicon-s-chevron-down class="w-4 h-4"/>
                 @elseif ($sortDirection === 'desc')
-                    <x-heroicon-s-chevron-up class="w-3 h-3" />
+                    <x-heroicon-s-chevron-up class="w-4 h-4"/>
                 @endif
             </span>
         @endif

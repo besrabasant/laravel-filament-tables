@@ -8,7 +8,7 @@
     x-cloak
     {{ $attributes->class(['relative inline-block', 'filament-tables-filters']) }}
 >
-    <x-tables::filters.trigger />
+    <x-tables::filters.trigger/>
 
     <div
         x-show="isOpen"

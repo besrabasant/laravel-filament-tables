@@ -1,6 +1,8 @@
-<x-tables::icon-button
+<x-tables::button
     icon="heroicon-o-filter"
+    icon-position="after"
     x-on:click="isOpen = ! isOpen"
-    :label="__('tables::table.buttons.filter.label')"
     {{ $attributes->class(['filament-tables-filters-trigger']) }}
-/>
+>
+    {{ __('tables::table.buttons.filter.label')  }}
+</x-tables::button>
