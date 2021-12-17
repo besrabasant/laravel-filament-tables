@@ -1,7 +1,7 @@
 @props([
-    'actions' => [],
-    'description' => null,
-    'heading',
+'actions' => [],
+'description' => null,
+'heading',
 ])
 
 <div {{ $attributes->class(['px-4 py-2'])->class(['filament-tables-header']) }}>
@@ -20,6 +20,8 @@
             @endif
         </div>
 
+        @if (count($actions))
         <x-tables::actions :actions="$actions" class="shrink-0" />
+        @endif
     </div>
 </div>

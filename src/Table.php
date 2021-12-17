@@ -40,7 +40,7 @@ class Table extends ViewComponent implements Htmlable
 
     protected ?View $header = null;
 
-    protected string | Closure | null $heading = null;
+    protected string|Closure|null $heading = null;
 
     protected bool $isPaginationEnabled = true;
 
@@ -130,7 +130,7 @@ class Table extends ViewComponent implements Htmlable
         return $this;
     }
 
-    public function heading(string | Closure | null $heading): static
+    public function heading(string|Closure|null $heading): static
     {
         $this->heading = $heading;
 
@@ -275,7 +275,7 @@ class Table extends ViewComponent implements Htmlable
     {
         $callback = $this->getRecordUrlUsing;
 
-        if (! $callback) {
+        if (!$callback) {
             return null;
         }
 
@@ -287,9 +287,19 @@ class Table extends ViewComponent implements Htmlable
         return $this->getLivewire()->getTableSortColumn();
     }
 
+    public function isColumnSortEnabled(?string $column): bool
+    {
+        return $this->getLivewire()->hasSortEnabled($column);
+    }
+
     public function getSortDirection(): ?string
     {
         return $this->getLivewire()->getTableSortDirection();
+    }
+
+    public function getColumnSortDirection(?string $column): ?string
+    {
+        return $this->getLivewire()->getColumnSortDirection($column);
     }
 
     public function isFilterable(): bool

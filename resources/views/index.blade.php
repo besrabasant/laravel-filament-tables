@@ -221,10 +221,10 @@
                         @foreach ($columns as $column)
                             <x-tables::header-cell
                                 :extra-attributes="$column->getExtraHeaderAttributes()"
-                                :is-sort-column="$getSortColumn() === $column->getName()"
+                                :is-sort-column="$isColumnSortEnabled($column->getName())"
                                 :name="$column->getName()"
                                 :sortable="$column->isSortable()"
-                                :sort-direction="$getSortDirection()"
+                                :sort-direction="$getColumnSortDirection($column->getName())"
                                 :class="$getHiddenClasses($column)"
                             >
                                 {{ $column->getLabel() }}
@@ -280,7 +280,9 @@
                                 </x-tables::cell>
                             @endforeach
 
-                            <x-tables::actions-cell :actions="$actions" :record="$record" />
+                            @if (count($actions))
+                                <x-tables::actions-cell :actions="$actions" :record="$record" />
+                            @endif
                         </x-tables::row>
                     @endforeach
 

@@ -47,6 +47,8 @@ interface HasTable extends HasForms
 
     public function getTableSortDirection(): ?string;
 
+    public function getColumnSortDirection(?string $column): ?string;
+
     public function isTableFilterable(): bool;
 
     public function isTableSearchable(): bool;

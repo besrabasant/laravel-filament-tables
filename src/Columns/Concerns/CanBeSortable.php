@@ -10,7 +10,9 @@ trait CanBeSortable
 
     protected ?array $sortColumns = [];
 
-    public function sortable(bool | array $condition = true): static
+    protected $sortCallback = null;
+
+    public function sortable(bool|array $condition = true, $callback = null): static
     {
         if (is_array($condition)) {
             $this->isSortable = true;
@@ -19,6 +21,8 @@ trait CanBeSortable
             $this->isSortable = $condition;
             $this->sortColumns = null;
         }
+
+        $this->sortCallback = $callback;
 
         return $this;
     }
@@ -36,5 +40,21 @@ trait CanBeSortable
     protected function getDefaultSortColumns(): array
     {
         return [Str::of($this->getName())->afterLast('.')];
+    }
+
+    /**
+     * @return bool
+     */
+    public function hasSortCallback(): bool
+    {
+        return $this->sortCallback !== null;
+    }
+
+    /**
+     * @return callable|null
+     */
+    public function getSortCallback(): ?callable
+    {
+        return $this->sortCallback;
     }
 }
