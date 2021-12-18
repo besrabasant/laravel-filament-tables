@@ -287,6 +287,16 @@ class Table extends ViewComponent implements Htmlable
         return $this->getLivewire()->getTableSortColumn();
     }
 
+    public function hasEnabledSorts(): bool
+    {
+        return $this->getLivewire()->hasEnabledSorts();
+    }
+
+    public function getEnabledSorts(): array
+    {
+        return $this->getLivewire()->getEnabledSorts();
+    }
+
     public function isColumnSortEnabled(?string $column): bool
     {
         return $this->getLivewire()->hasSortEnabled($column);

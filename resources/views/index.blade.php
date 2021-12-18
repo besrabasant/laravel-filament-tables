@@ -132,6 +132,10 @@
     }"
     class="filament-tables-component"
 >
+    <x-tables::info>
+        <x-tables::info.sorting-pills :has-enabled-sorts="$hasEnabledSorts()" :enabled-sorts="$getEnabledSorts()"
+                                      :columns="$columns"/>
+    </x-tables::info>
     <x-tables::container>
         <div
             x-show="hasHeader = ({{ ($header || $heading || $headerActions || $isSearchVisible || $isFiltersDropdownVisible) ? 'true' : 'false' }} || selectedRecords.length)"
