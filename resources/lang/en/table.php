@@ -46,7 +46,7 @@ return [
     'buttons' => [
 
         'filter' => [
-            'label' => 'Filter',
+            'label' => 'Filters',
         ],
 
         'open_actions' => [
