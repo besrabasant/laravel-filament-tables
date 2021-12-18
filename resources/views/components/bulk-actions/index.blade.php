@@ -1,7 +1,5 @@
 @props([
-'actions',
-'allRecordsCount',
-'allRecordsSelected' => false,
+'actions'
 ])
 
 <div
@@ -25,15 +23,6 @@
         class="absolute right-0 z-10 mt-2 shadow-xl rounded-md w-52 top-full"
     >
         <ul class="py-1 space-y-1 overflow-hidden bg-white shadow-lg rounded-md border border-gray-300">
-            {{-- FIXME: Fix select all records for current page only. Allow deselection of selected records             --}}
-            {{--            @if (! $allRecordsSelected)--}}
-            {{--                <x-tables::dropdown.item wire:click="toggleSelectAllTableRecords" icon="heroicon-o-duplicate">--}}
-            {{--                    {{ __('tables::table.actions.buttons.select_all.label', ['count' => $allRecordsCount]) }}--}}
-            {{--                </x-tables::dropdown.item>--}}
-
-            {{--                <div aria-hidden="true" class="border-t border-gray-200 ml-11"></div>--}}
-            {{--            @endif--}}
-
             @foreach($actions as $action)
                 <x-tables::dropdown.item
                     :x-on:click="'mountBulkAction(\'' . $action->getName() . '\')'"
