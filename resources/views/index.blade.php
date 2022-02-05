@@ -164,14 +164,6 @@
                 x-cloak
                 class="flex items-center justify-between p-2 h-14"
             >
-                <div>
-                    <x-tables::bulk-actions
-                        x-show="selectedRecords.length"
-                        :actions="$getBulkActions()"
-                        class="mr-2"
-                    />
-                </div>
-
                 @if ($isSearchVisible || $isFiltersDropdownVisible)
                     <div class="w-full md:w-auto flex items-center gap-2 md:max-w-md">
                         @if ($isSearchVisible)
@@ -189,6 +181,14 @@
                         @endif
                     </div>
                 @endif
+
+                <div>
+                    <x-tables::bulk-actions
+                        x-show="selectedRecords.length"
+                        :actions="$getBulkActions()"
+                        class="mr-2"
+                    />
+                </div>
             </div>
         </div>
 
